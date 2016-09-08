@@ -37,7 +37,7 @@ class EmailLabsCurl extends EmailLabsConfig{
     public function __construct(){
         try{
 
-            if( $this->getAppKey() != '' || $this->getAppSecret() != '' ){
+            if( $this->getAppKey() != '' && $this->getAppSecret() != '' ){
                 $this->curlLink = curl_init();
                 curl_setopt( $this->curlLink, CURLOPT_HTTPAUTH, CURLAUTH_BASIC );
                 curl_setopt( $this->curlLink, CURLOPT_USERPWD , $this->getAppKey().":".$this->getAppSecret() );
@@ -48,7 +48,7 @@ class EmailLabsCurl extends EmailLabsConfig{
             }
 
         }catch( \Exception $e ){
-            EmailLabsErrorHandler::setError( __CLASS__, 'Error', $e->getMessage() );
+            die( $e->getMessage() );
         }
     }
 
