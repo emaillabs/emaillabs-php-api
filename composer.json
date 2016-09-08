@@ -1,0 +1,37 @@
+{
+    "name": "emaillabs/emaillabs-php-api",
+    "description": "EmailLabs library for PHP",
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "1.0.1",
+    "authors": [
+        {
+            "name": "Marcin Kujawski",
+            "email": "m.kujawski@emaillabs.pl"
+        },
+        {
+          "name": "Mateusz Żyła",
+          "email": "m.zyla@emaillabs.pl"
+        }
+    ],
+    "repositories": [
+      {
+        "type": "git",
+        "url": "https://github.com/emaillabs/emaillabs-php-api"
+      }
+    ],
+    "require": {
+      "php": ">=5.3.0"
+    },
+    "autoload": {
+      "psr-4": { "EmailLabs\\" : "src/EmailLabs" }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+      "branch-alias": {
+        "1.0.0": "1.0.x-dev",
+        "1.0.1": "1.0.1-dev",
+        "1.0.2": "1.0.1-dev"
+      }
+    }
+}
