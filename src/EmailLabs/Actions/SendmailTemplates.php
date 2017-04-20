@@ -29,7 +29,7 @@ class SendmailTemplates extends Sendmail
      * @var array Allowed data
      */
     protected $allowedData = array( 'to', 'smtp_account', 'subject', 'html', 'text', 'from', 'from_name', 'headers', 'cc',
-        'cc_name', 'bcc', 'bcc_name', 'replay_to', 'tags', 'files', 'template_id' );
+        'cc_name', 'bcc', 'bcc_name', 'replay_to', 'reply_to', 'tags', 'files', 'template_id' );
 
     /**
      * @var array Array with required items
