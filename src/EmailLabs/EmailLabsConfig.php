@@ -26,12 +26,12 @@ class EmailLabsConfig{
     /**
      * @var string App key from EmailLabs panel
      */
-    private $appKey = '';
+    static public $appKey = '';
 
     /**
      * @var string App secret from EmailLabs panel
      */
-    private $appSecret = '';
+    static public $appSecret = '';
 
     /**
      * @var string Protocol of query
@@ -54,7 +54,7 @@ class EmailLabsConfig{
      * @return string App key
      */
     public function getAppKey(){
-        return $this->appKey;
+        return self::$appKey;
     }
 
     /**
@@ -63,7 +63,7 @@ class EmailLabsConfig{
      * @return string App secret
      */
     public function getAppSecret(){
-        return $this->appSecret;
+        return self::$appSecret;
     }
 
     /**
