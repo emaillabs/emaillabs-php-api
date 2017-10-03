@@ -92,4 +92,22 @@ class EmailLabsConfig{
     public function getCliVersion(){
         return $this->cliVersion;
     }
+
+    /**
+     * This method set app key
+     *
+     * @param string $appKey AppKey from panel
+     */
+    public function setAppKey( $appKey="" ){
+        $this->appKey = $appKey;
+    }
+
+    /**
+     * This method set app secret
+     *
+     * @param string $appSecret AppSecret from panel
+     */
+    public function setAppSecret( $appSecret ){
+        $this->appSecret = $appSecret;
+    }
 }
