@@ -26,10 +26,5 @@
     "autoload": {
       "psr-4": { "EmailLabs\\" : "src/EmailLabs" }
     },
-    "minimum-stability": "stable",
-    "extra": {
-      "branch-alias": {
-        "1.1": "master"
-      }
-    }
+    "minimum-stability": "stable"
 }
