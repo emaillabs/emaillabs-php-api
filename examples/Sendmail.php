@@ -10,6 +10,10 @@ require_once( '../autoload.php' );
 //This action will send e-mail
 $mail = new \EmailLabs\Actions\Sendmail();
 
+$mail->setAppKey( "APP_KEY" );
+
+$mail->setAppSecret( "APP_SECRET" );
+
 //Prepear email array
 $adresses = array(
     'reciver01@example.com' => array(
@@ -19,7 +23,6 @@ $adresses = array(
         'message_id' => 'messageid002@example.com'
     )
 );
-
 
 //Set required data
 $mail->setData( 'from', 'sender@example.com' );

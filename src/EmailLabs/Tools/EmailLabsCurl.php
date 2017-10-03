@@ -34,8 +34,18 @@ class EmailLabsCurl extends EmailLabsConfig{
     /**
      * Main constructor
      */
-    public function __construct(){
+    public function __construct( $appKey='', $appSecret='' ){
         try{
+
+            if( $appKey != '' )
+            {
+                $this->setAppKey( $appKey );
+            }
+
+            if( $appSecret != '' )
+            {
+                $this->setAppSecret( $appSecret );
+            }
 
             if( $this->getAppKey() != '' && $this->getAppSecret() != '' ){
                 $this->curlLink = curl_init();

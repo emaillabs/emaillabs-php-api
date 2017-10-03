@@ -24,6 +24,16 @@ use \EmailLabs\Tools\EmailLabsErrorHandler;
 class EmailLabsRequestLayer implements EmailLabsActionInterface{
 
     /**
+     * @var string App key from EmailLabs panel
+     */
+    protected $appKey = '';
+
+    /**
+     * @var string App secret from EmailLabs panel
+     */
+    protected $appSecret = '';
+
+    /**
      * @var string Method of the request
      */
     protected $method = 'GET';
@@ -91,9 +101,7 @@ class EmailLabsRequestLayer implements EmailLabsActionInterface{
     /**
      * constructor
      */
-    public function __construct(){
-        $this->curl = new EmailLabsCurl();
-    }
+    public function __construct(){}
 
     /**
      * @param $key string Key of param to send
@@ -179,6 +187,26 @@ class EmailLabsRequestLayer implements EmailLabsActionInterface{
      * Getting result
      */
     public function getResult(){
+        $this->curl = new EmailLabsCurl( $this->appKey, $this->appSecret );
         return $this->curl->getResult( $this->getAction(), $this->getMethod(), $this->getData(), $this->getParams(), $this->getFilters() );
     }
+
+    /**
+     * This method set app key
+     *
+     * @param string $appKey AppKey from panel
+     */
+    public function setAppKey( $appKey="" ){
+        $this->appKey = $appKey;
+    }
+
+    /**
+     * This method set app secret
+     *
+     * @param string $appSecret AppSecret from panel
+     */
+    public function setAppSecret( $appSecret ){
+        $this->appSecret = $appSecret;
+    }
+
 }
