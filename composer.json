@@ -29,7 +29,7 @@
     "minimum-stability": "stable",
     "extra": {
       "branch-alias": {
-        "master": "1.1"
+        "1.1": "master"
       }
     }
 }
