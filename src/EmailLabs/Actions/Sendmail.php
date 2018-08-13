@@ -34,7 +34,7 @@ class Sendmail extends EmailLabsRequestLayer
      * @var array Allowed data
      */
     protected $allowedData = array( 'to', 'smtp_account', 'subject', 'html', 'text', 'from', 'from_name', 'headers', 'cc',
-        'cc_name', 'bcc', 'bcc_name', 'replay_to', 'reply_to', 'tags', 'files' );
+        'cc_name', 'bcc', 'bcc_name', 'replay_to', 'reply_to', 'tags', 'files', 'multi_bcc', 'multi_cc' );
 
     /**
      * @var array Array with required items
